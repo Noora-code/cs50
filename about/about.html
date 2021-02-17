@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Login page</title>
+</head>
+
+<body>
+    <section></section>
+    <section class="section"></section>
+
+    <!-- start bg img -->
+    <div class="bg">
+        <div class="rotate">
+            <div class="flower">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="flower">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="flower">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="side">
+        <img src="https://raw.githubusercontent.com/mariofornaroli/y-responsive-login-landing/730b7ed1c45b910a51ad85de8408f9ce55aee4aa/images/img.svg"
+            alt="">
+    </section>
+
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Welcome To The EFS</p>
+            <div class="separator"></div>
+            <p class="welcome-message">Please, provide login credential to proceed and have access to all our services
+            </p>
+
+            <form class="login-form">
+                <div class="form-control">
+                    <input type="text" placeholder="Username">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-control">
+                    <input type="text" placeholder="Email">
+                    <i class="fas fa-mail-bulk"></i>
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="form-control">
+                    <input type="text" placeholder="Your Phone">
+                    <i class="fas fa-mobile"></i>
+                </div>
+                <div class="form-control">
+                    <input type="location" placeholder="location">
+                    <i class="fas fa-map"></i>
+                </div>
+                <button class="submit">Login</button>
+            </form>
+        </div>
+    </section>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- script of bg animate -->
+    <script>
+        const colors = [
+            '#e8f34b',
+            '#0e5a79',
+            '#237a56',
+            '#DE3B49'
+        ]
+        function createSquare() {
+            const section = document.querySelector('section');
+            const square = document.createElement('span');
+
+            var size = Math.random() * 9;
+
+            square.style.width = 1 + size + 'px';
+            square.style.height = 1 + size + 'px';
+
+            square.style.top = Math.random() * innerHeight + 'px';
+            square.style.left = Math.random() * innerWidth + 'px';
+
+
+            const bg = colors[Math.floor(Math.random() * colors.length)]
+            square.style.background = bg;
+
+            section.appendChild(square);
+
+            setTimeout(() => {
+                square.remove();
+
+            }, 5000);
+        }
+        setInterval(createSquare, 10)
+    </script>
+
+
+</body>
+
+</html>
